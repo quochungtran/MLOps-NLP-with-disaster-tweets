@@ -1,0 +1,4 @@
+image:
+  repository: quochungtran/classify_disaster_text
+  tag: latest
+  pullPolicy: Always
