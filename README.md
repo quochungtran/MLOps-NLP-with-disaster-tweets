@@ -252,6 +252,8 @@ kubectl get ing
 
 - Add the domain name `disaster.classify.com` of this IP to `/etc/hosts` where the hostnames are mapped to IP addresses. 
 
+Alternatively, you can utilize the wildcard DNS service provided by *.nip.io, eliminating the need to manually edit the `/etc/hosts` file. This service allows you to access your service using a domain name based on the IP address. For example, if your IP address is `192.168.1.100`, you can access your service using `192-168-1-100.nip.io`.
+
 ```bash
 sudo nano /etc/hosts
 [INGRESS_IP_ADDRESS] disaster.classify.com
