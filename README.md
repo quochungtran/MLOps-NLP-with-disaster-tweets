@@ -216,7 +216,7 @@ helm upgrade --install nginx-ingress-controller . # Deploy nginx Ingress
 
 Verify if the pod running in the specified namespace nginx-ingress
 ```bash
-k get pods -n nginx-ingress
+kubectl get pods -n nginx-ingress
 ```
 ![nginx-ingress](images/nginx-ingress.png)
 
@@ -265,15 +265,15 @@ sudo nano /etc/hosts
 
 ```bash
 cd helm/grafana-prometheus/kube-prometheus-stack/
-k create ns monitoring
+kubectl create ns monitoring
 kubens monitoring
 helm upgrade --install kube-grafana-prometheus .
 ```
 
-- Get all the informations all resources in monitoring namespace:
+- Check if pods are running within a namespace in Kubernetes, you can use the kubectl  in monitoring namespace:
 
 ```bash
-k get all
+kubectl get pods -n monitoring
 ```
 
 - Add all the services of this external IP to `/etc/hosts`, including:
@@ -288,7 +288,7 @@ sudo nano /etc/hosts
 To get grafana credentails, you could launch the following command to access the enviroment variable from the container, for example:
 
 ```bash
-k exec kube-grafana-prometheus-d5c9d4696-z6487 -- env | grep ADMIN
+kubectl exec kube-grafana-prometheus-d5c9d4696-z6487 -- env | grep ADMIN
 ```
 When I describe the pod, it states the ENV variable will be set from the secret:
 
