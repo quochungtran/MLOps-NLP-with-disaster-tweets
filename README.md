@@ -23,6 +23,7 @@ https://www.kaggle.com/competitions/nlp-getting-started
         * [Install gcloud CLI](#install-gcloud-cli)
         * [Install gke-cloud-auth-plugin](#install-gke-cloud-auth-plugin)
         * [Using terraform to create GKE cluster](#using-terraform-to-create-gke-cluster)
+        * [Install kubectl, kubectx and kubens](#install-kubectl-kubectx-and-kubens)
             * [Deploy nginx ingress controller](#deploy-nginx-ingress-controller) 
             * [Deploy model serving service](#deploy-model-serving-service)
             * [Deploy model tracking service](#deploy-model-tracking-service) 
@@ -200,6 +201,19 @@ gcloud container clusters get-credentials mlops-415023-gke --zone europe-west4-a
 - To view your highlighted cluster ID in the terminal, you can use the `kubectx` command.
 
 ![cluster_id](images/cluster_id.png)
+
+#### Install kubectl, kubectx and kubens
+
+Ensure that we have these tools to manage k8s cluster
+
+What are kubectx and kubens?
+
+- kubectx is a tool to switch between contexts (clusters) on kubectl faster.
+- kubens is a tool to switch between Kubernetes namespaces (and configure them for kubectl) easily.
+
+To install these tools, follow the instructions provided in the following section: https://github.com/ahmetb/kubectx#manual-installation-macos-and-linux.
+
+In my case kubens and kubectl cli were saved in `usr/local/bin/`.
 
 ##### Deploy nginx ingress controller
 
