@@ -8,11 +8,7 @@ HOMEDIR = "."
 LABEL = "target"
 TEXT  = "text"
 
-# define path to BERT model files
-# now we assume that all the data is stored in data
 DATA_PATH = os.path.join("data")
-
-# this is where you want to save the modeled
 MODEL_PATH = os.path.join("models")
 
 # original tranining/testing files
@@ -25,3 +21,6 @@ CLEANED_TESTING_FILE  = os.path.join(DATA_PATH, "cleaned_test.csv")
 
 # mlflow tracking uri
 MLFLOW_TRACKING_URI = "http://mlflow.tracking.com:5001"
+
+# config files path for text processing 
+TEXT_PROCESSING_MAP_PATH = "./src/text_processing_map_config"
