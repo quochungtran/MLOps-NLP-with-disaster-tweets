@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  classify_disaster_text:
+    image: quochungtran/classify_disaster_text:1
+    ports:
+      - "8085:30000"
+    build:
+      dockerfile: deployment/model_predictor/Dockerfile
+    environment:
+      - MODEL_PATH=/app/models/tfv_regression_model_fold_3.pkl
+      - TFIDF_PATH=/app/models/tfidf.pkl

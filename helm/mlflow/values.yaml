@@ -1,0 +1,11 @@
+replicaCount: 1
+
+image:
+  name: mlflow-server
+  repository: quochungtran/mlflow
+  tag: lts
+
+service:
+  type: LoadBalancer
+  port: 5001
+  containerPort: 1337

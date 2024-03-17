@@ -1,0 +1,8 @@
+version: '3.9'
+services:
+  mlflow:
+    image: quochungtran/mlflow:lts
+    ports:
+      - "5001:5000"
+    volumes: # define data volumes that will be mounted into the Docker containers
+      - ./run_env/data:/mlflow # any data written to /mlflow inside the container will actually be stored on the host machine in the ./run_env/data directory.
