@@ -409,7 +409,7 @@ kubectl create clusterrolebinding anonymous-admin-binding \
 #### Continuous deployment
 
 The CI/CD pipleine consist the three stages:
-- Test model correctness.
+- Test model correctness, unit test cases dedicated to source code.
 - Building the application image, and register it into DockerHub.
 - Deploy the application with latest image from DockerHub to GKE cluster.
 
@@ -436,6 +436,6 @@ In addition to infrastructure monitoring, a model tracking service is provided a
 
 #### TODOS
 
-- Add new model/expriments, redesign the code base.
+- Add new model/experiments, redesign the code base.
 - Apply nginx controller routing to mlflow.
-- Add more test case.
+- Add dashboard monitor model.
