@@ -95,7 +95,7 @@ Clone the repository to your local machine.
 Install all dependencies dedicated to the project
 
 ```bash
-conda create -n nlp-with-disaster-tweets python=<python_version>
+conda create -n nlp-with-disaster-tweets python=<python_version> # Here I used version 3.9.18
 conda activate nlp-with-disaster-tweets
 pip install -r requirements.txt
 make mlflow_up
